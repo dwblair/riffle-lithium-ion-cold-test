@@ -1,0 +1,75 @@
+
+/home/dwblair/arduino-1.6.7/hardware/tools/avr/bin/avrdude -C/home/dwblair/arduino-1.6.7/hardware/tools/avr/etc/avrdude.conf -v -patmega328p -carduino -P/dev/ttyUSB0 -b115200 -D -Uflash:w:/tmp/build02d01bea1ce99c06e0b3b3671ea81074.tmp/logger_test.ino.hex:i 
+
+avrdude: Version 6.0.1, compiled on Apr 14 2015 at 19:04:16
+         Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
+         Copyright (c) 2007-2009 Joerg Wunsch
+
+         System wide configuration file is "/home/dwblair/arduino-1.6.7/hardware/tools/avr/etc/avrdude.conf"
+         User configuration file is "/home/dwblair/.avrduderc"
+         User configuration file does not exist or is not a regular file, skipping
+
+         Using Port                    : /dev/ttyUSB0
+         Using Programmer              : arduino
+         Overriding Baud Rate          : 115200
+         AVR Part                      : ATmega328P
+         Chip Erase delay              : 9000 us
+         PAGEL                         : PD7
+         BS2                           : PC2
+         RESET disposition             : dedicated
+         RETRY pulse                   : SCK
+         serial program mode           : yes
+         parallel program mode         : yes
+         Timeout                       : 200
+         StabDelay                     : 100
+         CmdexeDelay                   : 25
+         SyncLoops                     : 32
+         ByteDelay                     : 0
+         PollIndex                     : 3
+         PollValue                     : 0x53
+         Memory Detail                 :
+
+                                  Block Poll               Page                       Polled
+           Memory Type Mode Delay Size  Indx Paged  Size   Size #Pages MinW  MaxW   ReadBack
+           ----------- ---- ----- ----- ---- ------ ------ ---- ------ ----- ----- ---------
+           eeprom        65    20     4    0 no       1024    4      0  3600  3600 0xff 0xff
+           flash         65     6   128    0 yes     32768  128    256  4500  4500 0xff 0xff
+           lfuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           hfuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           efuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           lock           0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           calibration    0     0     0    0 no          1    0      0     0     0 0x00 0x00
+           signature      0     0     0    0 no          3    0      0     0     0 0x00 0x00
+
+         Programmer Type : Arduino
+         Description     : Arduino
+         Hardware Version: 3
+         Firmware Version: 4.4
+         Vtarget         : 0.3 V
+         Varef           : 0.3 V
+         Oscillator      : 28.800 kHz
+         SCK period      : 3.3 us
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e950f
+avrdude: reading input file "/tmp/build02d01bea1ce99c06e0b3b3671ea81074.tmp/logger_test.ino.hex"
+avrdude: writing flash (20842 bytes):
+
+Writing | ################################################## | 100% 3.34s
+
+avrdude: 20842 bytes of flash written
+avrdude: verifying flash memory against /tmp/build02d01bea1ce99c06e0b3b3671ea81074.tmp/logger_test.ino.hex:
+avrdude: load data flash data from input file /tmp/build02d01bea1ce99c06e0b3b3671ea81074.tmp/logger_test.ino.hex:
+avrdude: input file /tmp/build02d01bea1ce99c06e0b3b3671ea81074.tmp/logger_test.ino.hex contains 20842 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.60s
+
+avrdude: verifying ...
+avrdude: 20842 bytes of flash verified
+
+avrdude done.  Thank you.
+
